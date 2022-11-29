@@ -1,0 +1,177 @@
+/* Start Variables */
+:root {
+    --mainColor: #dc3545; 
+    --mainTransition: 0.8s;
+    --mainLetterSpacing: -1px;
+    --mainWordSpacing: -2px; 
+    --PaddingTop: 4rem;
+    --PaddingBottom: 4rem;
+    --MarginTop: 3rem;
+    --mainBorderRaduis: 8px;
+    --BoxBackgroundColor: #dc35451f;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
+/* Start Head Section */
+.head {
+    min-height: 60vh;
+    background-image: url("../imgs/grad.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.head img {
+    width: 4rem;
+    height: 4rem;
+}
+.offcanvas.offcanvas-end {
+    border-left: 0rem;
+    width: 12rem;
+    background-color: var(--mainColor);
+}
+.navbar-nav {
+    padding-left: 1.5rem;
+}
+.nav-link {
+    color: var(--mainColor);
+    letter-spacing: var(--mainLetterSpacing);
+    position: relative;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--mainColor);
+}
+.nav-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0rem;
+    height: 0.1rem;
+    background-color: var(--mainColor);
+    transition: var(--mainTransition);
+}
+.nav-link:hover::before,
+.nav-link:focus::before {
+  width: 2.4rem;
+}
+@media(max-width: 992px) {
+    .nav-link {
+        color: white;
+        margin-bottom: 1rem;
+    }
+    .nav-link:hover,
+.nav-link:focus {
+    color: white;
+}
+.nav-link:hover::before,
+.nav-link:focus::before {
+  width: 2.4rem;
+  left: 0%;
+  transform: none;
+  background-color: white;
+}
+}
+.navbar-toggler {
+    padding: 0rem;
+    border: 0rem;
+    border-radius: 0rem;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+button:focus:not(:focus-visible) {
+    outline: 0rem;
+}
+.landing {
+    text-align: center;
+    padding-top: 8rem;
+}
+.landing h4 {
+    color: var(--mainColor);
+}
+/* End Head Section */
+/* Start Section About */
+.about {
+    padding-top: var(--PaddingTop);
+    padding-bottom: var(--PaddingBottom);
+}
+.about .content h1 {
+    letter-spacing: var(--mainLetterSpacing);
+    line-height: 1;
+}
+.about .content .btn {
+    border: 1px solid var(--mainColor);
+    border-radius: 0rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--mainColor);
+    letter-spacing: var(--mainLetterSpacing);
+    padding: 0.5rem 1.3rem;
+    position: relative;
+    transition: var(--mainTransition);
+    z-index: 1;
+}
+.about .content .btn::before {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: var(--mainColor);
+    top: 50%;
+    transform: translateY(-50%);
+    left: -0.75rem;
+    transition: var(--mainTransition);
+}
+.about .content .btn::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: var(--mainColor);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.75rem;
+    transition: var(--mainTransition);
+}
+.about .content .btn:hover,
+.about .content .btn:focus {
+    background-color: var(--mainColor);
+    color: white;
+}
+/* End Section About */
+/* Start About Section */
+.footer {
+    padding-top: var(--PaddingTop);
+    padding-bottom: var(--PaddingBottom);
+}
+.footer .about-us {
+    text-align: center;
+}
+.footer .about-us h6 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+.footer .about-us .social svg {
+    color: #dc3545;
+    padding-left: 1rem;
+}
+.footer .about-us .foot {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.footer .about-us .foot svg {
+    color: #f01b0b;
+}
+/* End About Section */
